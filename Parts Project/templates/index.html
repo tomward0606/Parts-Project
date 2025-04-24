@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parts List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Search Parts</h1>
+    <form method="get">
+        <input type="text" name="q" placeholder="Search..." value="{{ request.args.get('q', '') }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="parts-container">
+        {% for part in parts %}
+        <div class="part-card">
+            {% if part['Image'] %}
+                <img src="{{ url_for('static', filename='images/' + part['Image']) }}" alt="Part image">
+            {% endif %}
+            <h3>{{ part['Title'] }}</h3>
+            <p>{{ part['Description'] }}</p>
+            <form action="{{ url_for('add_to_basket') }}" method="post">
+                <input type="hidden" name="part_number" value="{{ part['Part Number'] }}">
+                <button type="submit">Add to Basket</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+
+    <a href="{{ url_for('basket') }}">Go to Basket</a>
+</body>
+</html>
