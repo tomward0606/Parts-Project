@@ -71,7 +71,7 @@ def send_order():
     basket = session.get('basket', [])
 
     # Email setup
-    receiver_email = 'mike@servitech.co.uk'  # Placeholder receiver email (my personal email)
+    receiver_email = 'tomward0606@icloud.com'  # Placeholder receiver email (my personal email)
 
     # Prepare the email content
     email_body = f"Order from {name}:\n\n"
