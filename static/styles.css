@@ -1,27 +1,71 @@
 body {
     font-family: sans-serif;
     padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+/* Responsive container layout */
 .parts-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
+/* Card layout for each part */
 .part-card {
     border: 1px solid #ccc;
     padding: 10px;
     width: 250px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
 }
 
+/* Make images fill their container */
 .part-card img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
+/* Forms and buttons styling */
+form {
+    margin-top: 10px;
+}
+
+input[type="text"],
+select,
+button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Links spacing */
+a {
+    display: block;
+    margin-top: 20px;
+}
+
+/* Mobile-specific tweaks */
 @media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
     .part-card {
         width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    select,
+    button {
+        font-size: 1rem;
     }
 }
