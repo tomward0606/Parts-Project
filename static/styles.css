@@ -1,71 +1,114 @@
+/* Base styles */
 body {
     font-family: sans-serif;
-    padding: 20px;
     margin: 0;
-    box-sizing: border-box;
+    padding: 1rem;
+    max-width: 800px;
+    margin-inline: auto;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-/* Responsive container layout */
-.parts-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+/* Headings */
+h1, h3 {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-/* Card layout for each part */
-.part-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 250px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-}
-
-/* Make images fill their container */
-.part-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Forms and buttons styling */
+/* Forms */
 form {
-    margin-top: 10px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 input[type="text"],
 select,
 button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
     box-sizing: border-box;
+    width: 100%;
 }
 
-/* Links spacing */
+/* Buttons */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Parts container */
+.parts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Individual part card */
+.part-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.part-card img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Basket item list */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 1rem;
+    background: white;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Link back */
 a {
     display: block;
-    margin-top: 20px;
+    margin-top: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #007BFF;
 }
 
-/* Mobile-specific tweaks */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive tweaks */
 @media (max-width: 600px) {
     body {
-        padding: 10px;
-    }
-
-    .part-card {
-        width: 100%;
+        padding: 0.75rem;
     }
 
     h1 {
         font-size: 1.5rem;
     }
 
-    input[type="text"],
-    select,
-    button {
-        font-size: 1rem;
+    h3 {
+        font-size: 1.2rem;
     }
 }
