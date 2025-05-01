@@ -22,6 +22,28 @@ h1, h3 {
     text-align: center;
 }
 
+.site-header {
+    position: sticky;
+    top: 0;
+    background-color: #fafafa;
+    padding: 1rem;
+    z-index: 100;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.site-header nav {
+    margin-top: 0.5rem;
+}
+
+.site-header form {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
 /* Forms */
 form {
     margin-top: 1rem;
